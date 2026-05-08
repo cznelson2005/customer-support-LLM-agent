@@ -199,7 +199,7 @@ with st.sidebar:
     st.markdown("### 📁 Data Source")
     data_dir = st.text_input(
         "Path to data folder",
-        value="data",
+        value="Kaggle Twitter User Complaint Data",
         help="Folder containing cluster_analysis.csv, df_sample.csv, final_report.json"
     )
 
