@@ -214,7 +214,6 @@ with st.sidebar:
 # ── Load data ─────────────────────────────────────────────────────────────────
 try:
     cluster_df, sample_df, report = load_data(data_dir)
-    st.write(cluster_df.columns.tolist()) 
 except Exception as e:
     st.error(f"❌ Could not load data from `{data_dir}`: {e}")
     st.info("Make sure the folder contains: `cluster_analysis.csv`, `df_sample.csv`, `final_report.json`")
