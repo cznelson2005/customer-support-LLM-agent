@@ -386,37 +386,37 @@ with tab3:
 
     filtered_recs = [r for r in recs if r.get("effort", "Medium") in effort_filter]
 
+# Build root cause lookup by rank
+    root_causes = {str(c["rank"]): c["cause"] for c in report.get("root_causes", [])}
+
     if filtered_recs:
         for rec in filtered_recs:
-            effort     = rec.get("effort", "Medium")
-            eff_cls    = effort_class(effort)
-            priority   = rec.get("priority", "—")
-            action     = rec.get("action", "")
-            impact     = rec.get("expected_impact", "")
+            effort   = rec.get("effort", "Medium")
+            eff_cls  = effort_class(effort)
+            priority = rec.get("priority", "—")
+            action   = rec.get("action", "")
+            impact   = rec.get("expected_impact", "")
 
-            st.markdown(
-                f"<div class='rec-card'>"
-                f"<div style='display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;'>"
-                f"<span style='font-family:Syne,sans-serif; font-weight:700; font-size:0.75rem; color:#6b6b9a;'>PRIORITY {priority}</span>"
-                f"<span class='{eff_cls}' style='font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em;'>● {effort} effort</span>"
-                f"</div>"
-                f"<p style='color:#e8e8f0; font-size:0.88rem; margin:0 0 8px 0; line-height:1.5;'>{action}</p>"
-                f"<p style='color:#6b6b9a; font-size:0.78rem; margin:0;'>Impact: {impact}</p>"
-                f"</div>",
-                unsafe_allow_html=True
-            )
+            # Match root cause by priority rank
+            related_cause = root_causes.get(str(priority), None)
+
+            with st.expander(f"Priority {priority} — {action[:80]}...", expanded=False):
+                st.markdown(
+                    f"<div class='rec-card'>"
+                    f"<div style='display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:10px;'>"
+                    f"<span style='font-family:Syne,sans-serif; font-weight:700; font-size:0.75rem; color:#6b6b9a;'>PRIORITY {priority}</span>"
+                    f"<span class='{eff_cls}' style='font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em;'>● {effort} effort</span>"
+                    f"</div>"
+                    f"<p style='color:#e8e8f0; font-size:0.88rem; margin:0 0 8px 0; line-height:1.5;'>{action}</p>"
+                    f"<p style='color:#6b6b9a; font-size:0.78rem; margin:0 0 12px 0;'>Impact: {impact}</p>"
+                    f"<hr style='border-color:#1e3a5f; margin:12px 0;'>"
+                    f"<p style='color:#6b6b9a; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.08em; margin:0 0 4px 0;'>Root Cause</p>"
+                    f"<p style='color:#a78bfa; font-size:0.83rem; margin:0;'>{related_cause or 'N/A'}</p>"
+                    f"</div>",
+                    unsafe_allow_html=True
+                )
     else:
         st.info("No recommendations match the selected filters.")
-
-    st.markdown("<br>", unsafe_allow_html=True)
-    st.markdown("### Root Causes")
-    for cause in report.get("root_causes", []):
-        with st.expander(f"#{cause['rank']} — {cause['cause']}"):
-            related = cause.get("related_issues", [])
-            if related:
-                st.markdown("**Related issues:**")
-                for issue in related:
-                    st.markdown(f"- {issue}")
 
 
 # ══════════════════════════════════════════════════════════════════════════════
