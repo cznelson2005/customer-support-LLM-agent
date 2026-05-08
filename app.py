@@ -362,7 +362,7 @@ with tab2:
         )
         if complaints:
             for c in complaints[:8]:
-                st.markdown(f"<div class='complaint-pill'>"{c}"</div>", unsafe_allow_html=True)
+                st.markdown(f"<div class='complaint-pill'>&#8220;{c}&#8221;</div>", unsafe_allow_html=True)
         else:
             st.markdown("<p style='color:#6b6b9a;'>No complaints found for this cluster.</p>", unsafe_allow_html=True)
 
