@@ -6,38 +6,31 @@ AI-powered complaint analysis pipeline using Gemini + Async Map-Reduce Agents.
 👉 [View Dashboard](https://customer-support-llm-agent-dygkzywxdkncqsbe66nkvj.streamlit.app/)
 
 ## 🏗️ Architecture
-Twitter Complaints
-│
-▼
-[Data Cleaning + Language Filter]
-│
-▼
-[SentenceTransformer Embeddings]
-│
-▼
-[KMeans Clustering + Silhouette Score]
-│
-▼
-[TF-IDF Top Keywords per Cluster]
-│
-▼
-[Async Map-Reduce Agent Pipeline]
-├── Chunk 1 → MAP Agent ──┐
-├── Chunk 2 → MAP Agent ──┼──→ REDUCE Agent → Final Report
-└── Chunk N → MAP Agent ──┘
-│
-▼
-[Streamlit Dashboard]
+```mermaid
+flowchart TD
+    A[🐦 Twitter Complaints] --> B[Data Cleaning & Language Filter]
+    B --> C[SentenceTransformer Embeddings]
+    C --> D[KMeans Clustering + Silhouette Score]
+    D --> E[TF-IDF Keywords per Cluster]
+    E --> F{Async Map-Reduce}
+    F --> G[MAP Agent: Chunk 1]
+    F --> H[MAP Agent: Chunk 2]
+    F --> I[MAP Agent: Chunk N]
+    G --> J[REDUCE Agent]
+    H --> J
+    I --> J
+    J --> K[🎯 Streamlit Dashboard]
+```
 
 ## 📁 Structure
-├── app.py                          # Streamlit dashboard
-├── requirements.txt                # Dependencies
-└── notebook/
-├──Support_Ticket_agent.ipynb      # Full pipeline notebook
-└── data/
-├── cluster_analysis.csv        # Per-cluster LLM analysis
-├── final_report.json           # Executive report
-└── df_sample.csv               # Sample complaints
+| File | Description |
+|------|-------------|
+| `app.py` | Streamlit dashboard |
+| `requirements.txt` | Dependencies |
+| `notebook/Support_Ticket_agent.ipynb` | Full pipeline notebook |
+| `data/cluster_analysis.csv` | Per-cluster LLM analysis |
+| `data/final_report.json` | Executive report |
+| `data/df_sample.csv` | Sample complaints |
 
 ## 🔧 Tech Stack
 - **Gemini 2.5 Flash** — LLM analysis
