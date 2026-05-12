@@ -2,50 +2,49 @@
   "top_issues": [
     {
       "rank": 1,
-      "issue": "Host Service and Account Issues, including cancellations and refund requests",
+      "issue": "Guest Booking Cancellations by Hosts",
       "affected_clusters": [
-        0,
-        6
+        1
       ],
       "severity": "High"
     },
     {
       "rank": 2,
-      "issue": "Dissatisfaction with Accommodation Quality due to listing discrepancies",
-      "affected_clusters": [
-        2
-      ],
-      "severity": "High"
-    },
-    {
-      "rank": 3,
-      "issue": "Unexpected Additional Fees not clearly disclosed upfront",
-      "affected_clusters": [
-        4
-      ],
-      "severity": "High"
-    },
-    {
-      "rank": 4,
-      "issue": "Direct Message Support Issues, leading to delays and lack of response",
+      "issue": "Unexpected Fees and Pricing",
       "affected_clusters": [
         3
       ],
       "severity": "High"
     },
     {
-      "rank": 5,
-      "issue": "Reservation and Booking Disputes due to unclear policies",
+      "rank": 3,
+      "issue": "Host Hostility and Safety Concerns",
       "affected_clusters": [
-        1
+        5
+      ],
+      "severity": "High"
+    },
+    {
+      "rank": 4,
+      "issue": "Host Refund/Account Issues",
+      "affected_clusters": [
+        0
+      ],
+      "severity": "Medium"
+    },
+    {
+      "rank": 5,
+      "issue": "Listing Misrepresentation & Support Delays",
+      "affected_clusters": [
+        2
       ],
       "severity": "Medium"
     },
     {
       "rank": 6,
-      "issue": "Limitations in Host Tools, impacting listing management",
+      "issue": "Listing Management Issues",
       "affected_clusters": [
-        5
+        4
       ],
       "severity": "Medium"
     }
@@ -53,85 +52,84 @@
   "root_causes": [
     {
       "rank": 1,
-      "cause": "Inconsistent host behavior and gaps in support processes for cancellations and refunds",
+      "cause": "Host-initiated cancellations and potential confusion around booking requirements and promotional offers.",
       "related_issues": [
-        "Host Service and Account Issues",
-        "Customer Service Inaction and Financial Loss"
+        1
       ]
     },
     {
       "rank": 2,
-      "cause": "Inaccurate or misleading listing descriptions leading to unmet expectations",
+      "cause": "Lack of clear upfront fee disclosure or inconsistent fee structures leading to user confusion and dissatisfaction.",
       "related_issues": [
-        "Dissatisfaction with Accommodation Quality"
+        3
       ]
     },
     {
       "rank": 3,
-      "cause": "Lack of transparency in pricing and upfront disclosure of all fees",
+      "cause": "Inadequate host vetting or screening processes, and a lack of swift and effective support for serious guest-host disputes.",
       "related_issues": [
-        "Unexpected Additional Fees"
+        5
       ]
     },
     {
       "rank": 4,
-      "cause": "Inadequate staffing or inefficient routing for direct message support",
+      "cause": "Discrepancies in refund processing or platform-initiated cancellations impacting host status.",
       "related_issues": [
-        "Direct Message Support Issues"
+        0
       ]
     },
     {
       "rank": 5,
-      "cause": "Potential miscommunication or lack of clarity regarding booking policies and dispute resolution",
+      "cause": "Inaccurate listing information and potential understaffing or inefficiencies in the customer support system.",
       "related_issues": [
-        "Reservation and Booking Disputes"
+        2
       ]
     },
     {
       "rank": 6,
-      "cause": "Outdated or insufficient features in the host portal",
+      "cause": "Technical glitches in the platform's listing management system or inadequate host support for critical listing operations.",
       "related_issues": [
-        "Listing Visibility and Host Tools"
+        4
       ]
     }
   ],
   "recommendations": [
     {
       "priority": 1,
-      "action": "Strengthen host performance monitoring and enhance support protocols for host cancellations and complex refund scenarios.",
-      "expected_impact": "Reduce host-initiated cancellations and improve resolution of financial disputes, enhancing customer trust.",
-      "effort": "High"
-    },
-    {
-      "priority": 2,
-      "action": "Implement stricter guidelines for accurate property descriptions and enhance listing verification processes.",
-      "expected_impact": "Minimize discrepancies between listings and actual accommodations, improving guest satisfaction and reducing complaints.",
-      "effort": "High"
-    },
-    {
-      "priority": 3,
-      "action": "Ensure all potential fees are clearly itemized and disclosed at the point of booking, or provide robust fee filtering options.",
-      "expected_impact": "Eliminate surprise charges and improve transparency in pricing, leading to increased customer satisfaction.",
+      "action": "Prioritize guest re-accommodation for host cancellations and clarify coupon code application for requested bookings.",
+      "expected_impact": "Reduce guest frustration and lost bookings due to host cancellations.",
       "effort": "Medium"
     },
     {
+      "priority": 2,
+      "action": "Review and clarify fee structures, ensure all mandatory and optional fees are clearly displayed before booking confirmation.",
+      "expected_impact": "Increase transparency and user trust, potentially reducing booking abandonment.",
+      "effort": "Medium"
+    },
+    {
+      "priority": 3,
+      "action": "Strengthen host vetting and response protocols for safety-critical incidents, and ensure immediate support for guests facing harassment or danger.",
+      "expected_impact": "Significantly improve guest safety and confidence in the platform.",
+      "effort": "High"
+    },
+    {
       "priority": 4,
-      "action": "Implement a dedicated direct message support channel with clear SLAs and consider AI for initial triage.",
-      "expected_impact": "Improve response times and resolution rates for time-sensitive issues communicated via direct message.",
+      "action": "Investigate refund discrepancies and provide clear guidance on cancellation policies impacting Superhost status.",
+      "expected_impact": "Reduce host dissatisfaction and loss of valuable Superhost status.",
       "effort": "Medium"
     },
     {
       "priority": 5,
-      "action": "Clarify booking policies for both hosts and guests, and streamline the dispute resolution process.",
-      "expected_impact": "Reduce friction and uncertainty in booking and dispute resolution, leading to fewer booking disputes.",
-      "effort": "Medium"
+      "action": "Implement stricter listing verification processes and improve customer support response times.",
+      "expected_impact": "Enhance guest experience by providing accurate information and timely assistance.",
+      "effort": "High"
     },
     {
       "priority": 6,
-      "action": "Prioritize development of enhanced host tools, including improved calendar and search functionalities, based on direct host feedback.",
-      "expected_impact": "Empower hosts with better tools to manage their listings, potentially increasing booking volume and host satisfaction.",
-      "effort": "High"
+      "action": "Investigate and resolve technical issues affecting listing visibility and management, and provide prompt support for listing removal requests.",
+      "expected_impact": "Improve host control over their listings and increase booking opportunities.",
+      "effort": "Medium"
     }
   ],
-  "executive_summary": "Customer feedback highlights significant concerns in host reliability, accommodation quality accuracy, and pricing transparency, all contributing to high severity complaints. Addressing these core issues, alongside improving direct message support and host tools, is crucial for enhancing customer satisfaction and reducing financial disputes."
+  "executive_summary": "Customer feedback highlights critical issues including host cancellations impacting guests, unexpected fees causing user distrust, and severe safety concerns stemming from host behavior. Addressing these high-severity issues requires immediate action to improve booking reliability, pricing transparency, and host vetting to ensure a safe and positive experience for all users."
 }
