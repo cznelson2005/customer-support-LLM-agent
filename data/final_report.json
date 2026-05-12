@@ -2,15 +2,16 @@
   "top_issues": [
     {
       "rank": 1,
-      "issue": "Guest Safety and Security Incidents",
+      "issue": "Host Service and Account Issues, including cancellations and refund requests",
       "affected_clusters": [
-        5
+        0,
+        6
       ],
       "severity": "High"
     },
     {
       "rank": 2,
-      "issue": "Host Cancellations Impacting Reservations",
+      "issue": "Dissatisfaction with Accommodation Quality due to listing discrepancies",
       "affected_clusters": [
         2
       ],
@@ -18,158 +19,119 @@
     },
     {
       "rank": 3,
-      "issue": "Cancellation & Refund Delays",
-      "affected_clusters": [
-        8
-      ],
-      "severity": "High"
-    },
-    {
-      "rank": 4,
-      "issue": "Account access and verification",
-      "affected_clusters": [
-        14
-      ],
-      "severity": "High"
-    },
-    {
-      "rank": 5,
-      "issue": "Unauthorized Apartment Bookings",
-      "affected_clusters": [
-        20
-      ],
-      "severity": "High"
-    },
-    {
-      "rank": 6,
-      "issue": "Extremely Negative Customer Experience",
-      "affected_clusters": [
-        18,
-        24
-      ],
-      "severity": "High"
-    },
-    {
-      "rank": 7,
-      "issue": "Urgent issue, no reply",
-      "affected_clusters": [
-        27
-      ],
-      "severity": "High"
-    },
-    {
-      "rank": 8,
-      "issue": "Reservation Cancellation Policy Confusion",
-      "affected_clusters": [
-        15
-      ],
-      "severity": "High"
-    },
-    {
-      "rank": 9,
-      "issue": "Host Support and Dispute Resolution",
+      "issue": "Unexpected Additional Fees not clearly disclosed upfront",
       "affected_clusters": [
         4
       ],
       "severity": "High"
     },
     {
-      "rank": 10,
-      "issue": "Booking Discrepancies and Issues",
+      "rank": 4,
+      "issue": "Direct Message Support Issues, leading to delays and lack of response",
       "affected_clusters": [
-        23
+        3
       ],
       "severity": "High"
+    },
+    {
+      "rank": 5,
+      "issue": "Reservation and Booking Disputes due to unclear policies",
+      "affected_clusters": [
+        1
+      ],
+      "severity": "Medium"
+    },
+    {
+      "rank": 6,
+      "issue": "Limitations in Host Tools, impacting listing management",
+      "affected_clusters": [
+        5
+      ],
+      "severity": "Medium"
     }
   ],
   "root_causes": [
     {
       "rank": 1,
-      "cause": "Inadequate security measures and incident response protocols.",
+      "cause": "Inconsistent host behavior and gaps in support processes for cancellations and refunds",
       "related_issues": [
-        5,
-        20,
-        26
+        "Host Service and Account Issues",
+        "Customer Service Inaction and Financial Loss"
       ]
     },
     {
       "rank": 2,
-      "cause": "Operational inefficiencies and process flaws impacting refunds, cancellations, and support.",
+      "cause": "Inaccurate or misleading listing descriptions leading to unmet expectations",
       "related_issues": [
-        2,
-        8,
-        11,
-        15,
-        21,
-        23,
-        27
+        "Dissatisfaction with Accommodation Quality"
       ]
     },
     {
       "rank": 3,
-      "cause": "Inconsistent property standards and listing quality control.",
+      "cause": "Lack of transparency in pricing and upfront disclosure of all fees",
       "related_issues": [
-        0,
-        6,
-        12,
-        23
+        "Unexpected Additional Fees"
       ]
     },
     {
       "rank": 4,
-      "cause": "Issues with platform functionality, user interface, and verification processes.",
+      "cause": "Inadequate staffing or inefficient routing for direct message support",
       "related_issues": [
-        1,
-        9,
-        10,
-        11,
-        14,
-        16,
-        19,
-        28
+        "Direct Message Support Issues"
       ]
     },
     {
       "rank": 5,
-      "cause": "Deficiencies in customer service training, communication, and ethical practices.",
+      "cause": "Potential miscommunication or lack of clarity regarding booking policies and dispute resolution",
       "related_issues": [
-        3,
-        18,
-        24
+        "Reservation and Booking Disputes"
+      ]
+    },
+    {
+      "rank": 6,
+      "cause": "Outdated or insufficient features in the host portal",
+      "related_issues": [
+        "Listing Visibility and Host Tools"
       ]
     }
   ],
   "recommendations": [
     {
       "priority": 1,
-      "action": "Enhance guest safety protocols, improve property security vetting, and strengthen incident response capabilities for safety and security breaches.",
-      "expected_impact": "Significantly reduce severe safety incidents and associated customer distress, improving overall trust and satisfaction.",
+      "action": "Strengthen host performance monitoring and enhance support protocols for host cancellations and complex refund scenarios.",
+      "expected_impact": "Reduce host-initiated cancellations and improve resolution of financial disputes, enhancing customer trust.",
       "effort": "High"
     },
     {
       "priority": 2,
-      "action": "Streamline cancellation and refund processes, implement stricter penalties for host cancellations, and improve support for affected parties.",
-      "expected_impact": "Increase booking reliability, reduce financial friction for customers, and improve customer confidence in cancellation policies.",
+      "action": "Implement stricter guidelines for accurate property descriptions and enhance listing verification processes.",
+      "expected_impact": "Minimize discrepancies between listings and actual accommodations, improving guest satisfaction and reducing complaints.",
       "effort": "High"
     },
     {
       "priority": 3,
-      "action": "Overhaul account access and verification processes to be more user-friendly and secure, while ensuring robust mechanisms against unauthorized bookings.",
-      "expected_impact": "Reduce account lockout frustrations, prevent fraudulent activities, and restore user control over their accounts and properties.",
-      "effort": "High"
+      "action": "Ensure all potential fees are clearly itemized and disclosed at the point of booking, or provide robust fee filtering options.",
+      "expected_impact": "Eliminate surprise charges and improve transparency in pricing, leading to increased customer satisfaction.",
+      "effort": "Medium"
     },
     {
       "priority": 4,
-      "action": "Improve listing quality control, enhance property suitability vetting, and provide clearer communication on accommodation standards and fees.",
-      "expected_impact": "Minimize discrepancies between advertised and actual accommodations, reduce guest dissatisfaction, and prevent disputes related to property conditions and fees.",
+      "action": "Implement a dedicated direct message support channel with clear SLAs and consider AI for initial triage.",
+      "expected_impact": "Improve response times and resolution rates for time-sensitive issues communicated via direct message.",
       "effort": "Medium"
     },
     {
       "priority": 5,
-      "action": "Investigate and address systemic issues in customer support, including response times for urgent inquiries, staff training, and complaint handling procedures.",
-      "expected_impact": "Improve overall customer experience, reduce negative sentiment, and ensure timely resolution of critical customer issues.",
+      "action": "Clarify booking policies for both hosts and guests, and streamline the dispute resolution process.",
+      "expected_impact": "Reduce friction and uncertainty in booking and dispute resolution, leading to fewer booking disputes.",
+      "effort": "Medium"
+    },
+    {
+      "priority": 6,
+      "action": "Prioritize development of enhanced host tools, including improved calendar and search functionalities, based on direct host feedback.",
+      "expected_impact": "Empower hosts with better tools to manage their listings, potentially increasing booking volume and host satisfaction.",
       "effort": "High"
     }
   ],
-  "executive_summary": "Analysis of 29 customer complaint clusters reveals critical issues in guest safety, booking reliability due to host cancellations, and financial/account access problems. These high-severity issues stem from inadequate security, operational inefficiencies, and inconsistent quality control, demanding immediate and comprehensive action to restore customer trust and satisfaction."
+  "executive_summary": "Customer feedback highlights significant concerns in host reliability, accommodation quality accuracy, and pricing transparency, all contributing to high severity complaints. Addressing these core issues, alongside improving direct message support and host tools, is crucial for enhancing customer satisfaction and reducing financial disputes."
 }
