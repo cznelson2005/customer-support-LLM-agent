@@ -10,8 +10,8 @@ AI-powered complaint analysis pipeline using Gemini + Async Map-Reduce Agents.
 flowchart TD
     A[🐦 Twitter Complaints] --> B[Data Cleaning & Language Filter]
     B --> C[SentenceTransformer Embeddings]
-    C --> D[KMeans Clustering + Silhouette Score]
-    D --> E[TF-IDF Keywords per Cluster]
+    C --> D[BERTopics clustering]
+    D --> E[Keywords per Cluster, excluding common and customized English stop words]
     E --> F{Async Map-Reduce}
     F --> G[MAP Agent: Chunk 1]
     F --> H[MAP Agent: Chunk 2]
@@ -36,8 +36,7 @@ flowchart TD
 - **Gemini 2.5 Flash** — LLM analysis
 - **Async Map-Reduce** — parallel agent calls to avoid token limits
 - **SentenceTransformer** — complaint embeddings
-- **KMeans + Silhouette** — optimal clustering
-- **TF-IDF** — keyword extraction
+- **BERTopics** — optimal clustering and keywords extraction
 - **Streamlit + Plotly** — interactive dashboard
 
 ## 📊 Output
